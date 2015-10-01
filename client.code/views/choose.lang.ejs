@@ -1,0 +1,13 @@
+<% var langs = Object.keys(window.App.strings); %>
+<% var ss = window.App.strings; %>
+<div class="tablecell">
+	<div class="row header">
+		<div class="col-md-6 col-md-offset-3 texts">
+			<% for(var i = 0, ilen = langs.length; i < ilen; i++) { %>
+				<a href='<%= App.params.nextPage.replace(":lang", langs[i]) %>'> <img alt="<%= langs[i].toUpperCase() %>" src="/public.shared/img/<%= langs[i] %>.png" height="50px" width="auto" /> <span class="h3"> <%= ss[langs[i]]['chooseLangBody'] %> </span> </a>
+				<br />
+				<br />
+			<% } %>
+		</div>
+	</div>
+</div>

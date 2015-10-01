@@ -1,0 +1,15 @@
+* {
+	text-align: left !important;
+}
+
+p{
+	font-size: 20px;
+}
+
+.alignCenter {
+	text-align: center !important;
+}
+
+#infoPageWrapper{
+	width: 100%;
+}

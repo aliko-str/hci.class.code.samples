@@ -1,0 +1,138 @@
+<% var s = window.App.S; %>
+<% var sEN = window.App.strings['en']; %>
+<form id="demographicsForm" role="form" class="form-horizontal" action="#">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<br />
+			<header class="h1">
+				<%= s["demTitle"]  %>
+			</header>
+			<hr />
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="row">
+			<div class="col-md-5 control-label col-md-offset-1">
+				<p align="right">
+					<%= s["qVision"]  %>:
+				</p>
+			</div>
+			<div align="left" class="col-md-5">
+				<div class="radio">
+					<label>
+						<input type="radio" required name="ifColorBlind" value="1" />
+						<%=  s['qVisionOpt1'] %>.</label>
+					<br />
+				</div>
+				<div class="radio">
+					<label>
+						<input type="radio" required name="ifColorBlind" value="2" />
+						<%=  s['qVisionOpt2'] %>.</label>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="row">
+			<div class="col-md-5 control-label col-md-offset-1">
+				<p align="right">
+					<%= s["qGender"]  %>:
+				</p>
+			</div>
+			<div align="left" class="col-md-5">
+				<div class="radio">
+					<label>
+						<input type="radio" required name="gender" value="1" />
+						<%=  s['qGenderOpt1'] %>.</label>
+					<br />
+				</div>
+				<div class="radio">
+					<label>
+						<input type="radio" required name="gender" value="2" />
+						<%=  s['qGenderOpt2'] %>.</label>
+					<br />
+				</div>
+				<div class="radio">
+					<label>
+						<input type="radio" required name="gender" value="3" />
+						<%=  s['qGenderOpt3'] %>.</label>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="row">
+			<div class="col-md-5 control-label col-md-offset-1">
+				<p align="right">
+					<%= s["qAge"]  %>:
+				</p>
+			</div>
+			<div align="left" class="col-md-5">
+				<% for(var i = 1; i <= 6; i++) {%>
+				<div class="radio">
+					<label>
+						<input type="radio" required name="ageGroup" value="<%= i %>" />
+						<%=  s['qAgeOpt' + i] %>.</label>
+					<br />
+				</div>
+				<% } %>
+			</div>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="row">
+			<div class="col-md-5 control-label col-md-offset-1">
+				<p align="right">
+					<%= s["qGroup"]  %>:
+				</p>
+			</div>
+			<div align="left" class="col-md-5">
+				<% for(var i = 1; i <= 5; i++) {%>
+				<div class="radio">
+					<label>
+						<input type="radio" required name="socialGroup" value="<%=  i %>" />
+						<span><%=  s['qGroupOpt' + i] %>.</span></label>
+					<br />
+				</div>
+				<% } %>
+			</div>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<div class="row">
+			<div class="col-md-5 control-label col-md-offset-1">
+				<p align="right">
+					<%= s["qDyslexic"]  %>:
+				</p>
+			</div>
+			<div align="left" class="col-md-5">
+				<div class="radio">
+					<label>
+						<input type="radio" required name="ifDyslexic" value="0" />
+						<span><%=  s['qDyslexicNo'] %>.</span></label>
+					<br />
+				</div>
+				<div class="radio">
+					<label>
+						<input type="radio" required name="ifDyslexic" value="1" />
+						<span><%=  s['qDyslexicYes'] %>.</span></label>
+					<br />
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<hr />
+			<input type="submit" id="proceed" class="btn btn-primary btn-lg" value="<%= s['proceed']%>"/>
+		</div>
+	</div>
+	<br />
+</form>
+

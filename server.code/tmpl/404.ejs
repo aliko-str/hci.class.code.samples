@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>404</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			.globalOverlay {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: white;
+				display: table;
+				z-index: 100;
+			}
+			.tablecell {
+				vertical-align: middle;
+				display: table-cell;
+			}
+			h1, h2 {
+				width: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div align="center" id="rootEl" class="globalOverlay">
+			<div align="middle" class="tablecell">
+				<h1 align="left">404:</h1>
+				<% for(var i in msgs) { %>
+					<h2 align="left">
+						<%= msgs[i] %>
+						<hr/>
+					</h2>
+				<% } %>
+			</div>
+		</div>
+	</body>
+</html>

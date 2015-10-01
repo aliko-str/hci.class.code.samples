@@ -1,0 +1,12 @@
+<% var s = window.App.S; %> <h1><%= window.App.params.emailed?s['emailedOk']:s['completeTitle'] %>&nbsp;<small id="nextSessionCountdown"></small></h1>
+<p class="lead">
+	<%= s['completeBody']%>
+</p>
+<hr />
+<p id="thanksForFeedback" class="text-success"><%= s['thanksForFeedback'] %></p>
+<form  role="form" class="form-horizontal" id="feedbackForm" action="#">
+	<textarea rows="5" cols="50" class="form-control" id="feedbackArea" placeholder="<%= s['feedbackPlaceholder'] %>"></textarea>
+	<p id="charactersLeft" class="text-muted" align="right">
+		500
+	</p>
+</form>

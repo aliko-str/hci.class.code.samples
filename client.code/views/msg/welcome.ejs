@@ -1,0 +1,37 @@
+<% var s = window.App.S; %> 
+<h1 align="left"> <%= s["welcomeTitle"] %> </h1>
+<hr />
+<p class="lead"><%= s["welcomeTitle2"] %></p>
+<p>
+	<%= s["welcomeBody"] %>
+</p>
+<ul>
+	<li>
+		<p>
+			<%= s["wStep1"] %>
+		</p>
+	</li>
+	<li>
+		<p>
+			<%= s["wStep2"] %>
+		</p>
+	</li>
+	<li>
+		<p>
+			<%= s["wStep3"] %>
+		</p>
+	</li>
+	<li>
+		<p>
+			<%= s["wStep4"] %>
+		</p>
+	</li>
+</ul>
+<p class="text-muted" align="left">
+	<%= s["wDataNote"] %>
+</p>
+<div class="checkbox">
+	<label>
+		<input id="agreeToParticipate" type="checkbox">
+		<%= s["dataUseAgree"]%> </label>
+</div>

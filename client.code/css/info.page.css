@@ -1,0 +1,15 @@
+#wildWebControls{
+	display: none;
+}
+
+#infoPageWrapper{
+	font-size: 200%;
+	border: 1px solid gray;
+	border-radius: 5px;
+	padding: 0 10%;
+}
+
+#infoPageWrapper div{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}

@@ -1,0 +1,33 @@
+.corrStrengthForeground {
+	position: relative;
+	z-index: 2;
+}
+
+p, span {
+	font-size: 20px;
+}
+
+.resultSection {
+	/*height: 100px;*/
+}
+
+.resultSection * {
+	text-align: left;
+}
+
+.crowdMetaphor {
+	height: auto;
+	width: 100%;
+}
+
+.compareToTitle:first-letter {
+	text-transform: uppercase;
+}
+
+.bgLightBlue {
+	background-color: #d8ebff;
+}
+
+#emailError {
+	display: none;
+}

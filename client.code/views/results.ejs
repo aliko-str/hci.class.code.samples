@@ -1,0 +1,56 @@
+<% function toBold(s){ return "<b>"+s+"</b>";} %>
+<% var s = window.App.S; %>
+<% var r = testResults; %>
+<div id="resultTitleBox" class="row">
+	<div class="col-sm-10 col-sm-offset-1">
+		<h1 align="left"><%= s['resultTitle'] %></h1>
+		<p align="left">
+			<%= s["resultBody"] %>
+		</p>
+	</div>
+</div>
+<div class="container-fluid" id="compareWrapper"></div>
+
+<div class="row">
+	<div class="col-sm-10 col-sm-offset-1">
+		<hr />
+		<h3 align="left"><%= s['resTitleFav'] %></h3>
+	</div>
+	<div class="col-sm-5 col-sm-offset-1">
+		<h3 align="left"><%= toBold(s['resMost']) %></h3>
+		<img src="/imgstore/<%= r.mostFavored.codeName %>" height="auto" width="100%" />
+	</div>
+	<div class="col-sm-5">
+		<h3 align="left"><%= toBold(s['resLeast']) %></h3>
+		<img src="/imgstore/<%= r.leastFavored.codeName %>" height="auto" width="100%" />
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-10 col-sm-offset-1">
+		<br />
+		<hr />
+	</div>
+</div>
+<form  role="form" class="form-horizontal bgLightBlue" id="emailForm" action="#">
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1">
+			<br />
+			<div class="form-group">
+				<label for="theEmail">
+					<p>
+						<%= s['giveEmail'] %>
+					</p>
+					<p class="text-danger" id="emailError"><%= s['incorrectEmail'] %></p>
+				</label>
+				<input type="email" class="form-control" id="theEmail" placeholder="Email">
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1">
+			<input type="submit" id="proceed" class="btn btn-primary btn-lg" value="<%= s['proceed']%>"/>
+			<br />
+			<br />
+		</div>
+	</div>
+</form>

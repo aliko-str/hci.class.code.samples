@@ -1,0 +1,32 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	max-width: 1280px;
+	min-width: 1024px;
+}
+
+#mainDiv, #root {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	padding: 0 !important;
+}
+
+.full-height {
+	height: 100%;
+}
+
+.toCenterWrapper {
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	display: table;
+	z-index: 100;
+}
+
+.toCenterWrapper > div {
+	vertical-align: middle;
+	display: table-cell;
+}

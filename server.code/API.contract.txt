@@ -1,0 +1,74 @@
+		NOTE: all communications are in JSON
+		NOTE: use http://api.atw-lab.com/ for debugging without worrying, it uses a test database, not the production one.
+		NOTE: always set the POST request header "Content-Type" to "application/json"
+	
+		"commonly used variables" = {
+			":lang" : "replace with either 'en' or 'it'",
+			":sessionId" : "after posting demographic data you'll get this ID, it'll be called 'assignedId'"
+		},
+		
+		
+		"get routes" = {
+			"/contract/" : "this description",
+			
+			"/ping/" : "is server up?",
+			
+			 // returns an array of stimuli (aka, images) for a test
+			"/stimuli/:lang/:sessionId?" : [{
+				"id" : string, // stimuli ids to be submitted back together with ratings
+				"ulr" : string // the url to each image
+			}],
+			
+			// returns the results of test for a session
+			"/evaluation.results/:lang/:sessionId?" : { 
+				"gender" : string,
+				"ageGroup" : string,
+				"socialGroup" : string,
+				"corr" : {
+					"compVC" : float, // correlation between the ratings of currently-tested
+					// personand machine scores
+					"otherHumans" : float, // correlation with other people ratings
+					"gender" : float, // correlation with other people of same gender,
+					"ageGroup" : float, // same as above but for age
+					"socialGroup" : float, // same as above but for social group
+				},
+				"percent" : {
+					//has the same names as in "corr", but describes the mean of ratings. All in the
+					// range 0 to 100. Numbers <50 imply current user gave lower scores than <machine
+					// or other humans or etc.>
+				},
+				"mostFavored" : string, // the algorithms say this image could be the most liked
+				// by the user
+				"leastFavored" : string // the opposite of above
+			}
+		};
+		
+		
+		NOTE: // don't  forget to JSON.stringify the body of POSTs
+		"post routes" = {
+			// takes demographics info and returns a 'session' object. Use session.assignedId for future requests
+			"/demographics.info/:lang?":{ // the body of requrest should contain the object 
+				 "lang": string, // either "en" or "it"
+				 "gender": string, // either "m", or "f" or "o" <-- stands for "other"
+				 "ageGroup": string, // any string, though I'd prefer you using those I show already
+				 "socialGroup": string, // any meaningful string
+				 "ifColorBlind": int // either "1" or "0"
+			},
+			
+			// takes an array of stimulusId-rating pairs and returns the number of saved db rows 
+			"/stimuli/:lang/:sessionId?": [{
+				 "rating": int, // 1 to 9
+				 "stimulusId": int // the ids you've got before
+			}],
+			
+			// in case you want to email results to a person, you post the following object here
+			"/mail.results/:lang/:sessionId?":{
+				 "email": string, // email address
+				 "fallback": string, // plainText email body
+				 "html": string, // email body as inlined html
+			},
+			
+			// in case you want to save feedback of a user
+			"/feedback/:sessionId?": {
+				"feedback": string
+			}

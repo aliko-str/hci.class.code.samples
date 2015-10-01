@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>tLight. Visual Complexity Detection.</title>
+		<!-- <link href="/public.shared/bootstrap/css/bootstrap.min.css" rel="stylesheet" /> -->
+		<link href="/public/css/bootstrap2.css" rel="stylesheet" />
+		<link href="/public/css/shared.css" rel="stylesheet" />
+		<% for(var aCssHref in CssHrefs){ %>
+		<link href="/public<%= CssHrefs[aCssHref] %>" rel="stylesheet" />
+		<% } %>
+		<style>
+			html, body {
+				padding: 10px;
+				min-width: 768px;
+			}
+			.header, .footer {
+				background-color: white;
+			}
+			.header * {
+				text-align: center;
+			}
+			.footer {
+				text-align: center;
+			}
+			.list-group {
+				text-align: justify;
+			}
+			#mainDiv {
+				background-color: white;
+			}
+			.note {
+				color: #999999;
+			}
+			.globalOverlay {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: white;
+				display: table;
+				z-index: 100;
+			}
+			.tablecell {
+				vertical-align: middle;
+				display: table-cell;
+			}
+			.middle {
+				width: 50%;
+				height: 40%;
+				left: 25%;
+				top: 30%;
+				position: relative;
+			}
+			#ieNotSupported {
+				display: none;
+			}
+			#jsRequired {
+			}
+		</style>
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+		<!--[if lt IE 9]>
+		<script src="/public.shared/js.side.libraries/html5shiv.js"></script>
+		<script src="/public.shared/js.side.libraries/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<script type="text/javascript">
+			window.App = {};
+			window.App.debug = <%= _debug%>;
+			window.App.params = JSON.parse('<%- appParams %>');
+			window.jqRootSel = "#root";
+		</script>
+		<div class="" id="mainDiv">
+			<div id="jsRequired" class="globalOverlay">
+				<div class="tablecell">
+					<div class="middle">
+						<h1 style="text-align: justify"> It is close to impossible to showcase our work without Javascript. Please enable javascript in your browser. If your browser doesn't support javascript, you can always download the latest version of <a href="http://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a></h1>
+					</div>
+				</div>
+			</div>
+			<div id="ieNotSupported" class="globalOverlay">
+				<div class="tablecell">
+					<div class="middle">
+						<h1 style="text-align: justify"> The browser you use is obsolete and cannot run our code. Please update your browser (or use another browser, e.g., <a href="http://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a>) and we'll welcome you back. </h1>
+					</div>
+				</div>
+			</div>
+			<div id="screenSizeRequirement" style="display: none;" class="globalOverlay">
+				<div class="tablecell">
+					<div class="middle">
+						<h3 style="text-align: justify"> For the experiment to run, the minimum size of the browser window must be 1024 by 768 pixels. Please, maximize your browser window or use a bigger screen. </h3>
+						<br />
+						<p class="h3 text-muted" id="windowSizeNote">Current window size: </p>
+					</div>
+				</div>
+			</div>
+			<script type="text/javascript">
+				var _jsRequiredEl = document.getElementById("jsRequired");
+				_jsRequiredEl.parentNode.removeChild(_jsRequiredEl);
+				if((window.innerWidth < 1024 || window.innerHeight < 768) && !window.App.debug) {
+					document.getElementById("screenSizeRequirement").style.display = "table";
+					document.getElementById("windowSizeNote").textContent += window.innerWidth + "x" + window.innerHeight;
+				}
+			</script>
+			<div id="loader"  class="globalOverlay">
+				<div class="tablecell">
+					<div class="middle">
+						<h1 style="text-align: center"><img alt="Loading..." src="/public.shared/img/ajax-loader.gif" height="100px" width="100px"/>
+						<br/>
+						Loading resources...</h1>
+					</div>
+				</div>
+			</div>
+			<!--[if lt IE 8]>
+			<script type="text/javascript">
+			var ieNotSupported = document.getElementById("ieNotSupported");
+			ieNotSupported.style.display = "table";
+			</script>
+			<![endif]-->
+			<!-- THE MAIN BODY IS BELOW -->
+			<div align="center" id="root" class="container-fluid">
+				<header class="row header">
+					<br />
+					<hr />
+					<h1>Welcome to <b>AT</b>tractiveness <b>W</b>alktough lab!</h1>
+					<hr />
+					<br />
+				</header>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+						<p>
+							empty body so far...
+						</p>
+					</div>
+				</div>
+				<footer class="row footer">
+					<br />
+					<hr />
+					<big>© 2013-<span id="currYearBox"></span> <a href="http://www.atw-lab.com/">ATW-LAB™</a></big>
+					<br />
+					<hr />
+					<br />
+				</footer>
+				<script type="text/javascript">
+					var _year = new Date().getFullYear();
+					document.getElementById("currYearBox").innerHTML = _year.toString();
+				</script>
+			</div>
+			<script type="text/javascript" src="/public.shared/js.side.libraries/jquery-2.1.4.min.js"></script>
+			<script type="text/javascript" src="/public.shared/js.side.libraries/jquery-ui-1.10.3.custom.min.js"></script>
+			<script type="text/javascript" src="/public.shared/bootstrap/js/bootstrap.min.js"></script>
+			<script type="text/javascript" src="/public.shared/js.side.libraries/ejs_production.js"></script>
+			<script type="text/javascript" src="/public.shared/js.side.libraries/ejs_fulljslint.js"></script>
+			<script type="text/javascript" src="/public.shared/js.side.libraries/bootstrap-select.js"></script>
+			<script type="text/javascript" src="/public.shared/js.side.libraries/bootstrap-switch.js"></script>
+			<% if(langs){%>
+			<% for(var i = 0, ilen = langs.length; i < ilen; i++){ %>
+			<script type="text/javascript" src="/strings/<%= langs[i] %>/<%= !i?'main':'nonmain' %>/tmp.js"></script>
+			<% } %>
+			<% } %>
+			<script type="text/javascript" src="/public.shared/js.shared/util.js"></script>
+			<script type="text/javascript" src="/public.shared/js.shared/client.error.logger.js"></script>
+			<script type="text/javascript" src="/public/js/project.specific.shared.js"></script>
+			<script type="text/javascript" src="/public/js/data.pre-loader.js"></script>
+			<% for(var aJsSrc in jsSrcs){ %>
+			<script type="text/javascript" src="/public<%= jsSrcs[aJsSrc] %>"></script>
+			<% } %>
+		</div>
+	</body>
+</html>

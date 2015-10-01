@@ -1,0 +1,14 @@
+#savedNotice {
+	display: none;
+	background:rgba(50,205,50,0.5);
+}
+
+
+#charactersLeft{
+	text-align: right !important;
+}
+
+
+#thanksForFeedback{
+	display: none;
+}

@@ -1,0 +1,62 @@
+html, div{
+	padding: 0 !important;
+	margin: 0 !important;
+	/*background-color:#666666;*/
+}
+
+
+#testWrapper {
+	align-items: center;
+	height: 100%;
+	background-color:#666666;
+	/*background-color:#888888;*/
+}
+
+#testWrapper > div {
+	height: 768px;
+	width: 1024px;
+	display: none;
+}
+
+#setRatingWrapper{
+	background-color: white;
+}
+
+span, p{
+	font-size: 20px;
+}
+
+input[type=radio]{
+	width: 20px;
+	height: 20px;
+}
+
+.apUXRadio {
+	margin-left: 3px !important;
+	margin-right: 3px !important;
+}
+
+.apUXRadio p{
+	margin: 0;
+	margin-right: 3px;
+}
+
+.apUXRadio input {
+	margin: 0 !important;
+	float:none;
+}
+
+.apUXRadio input:hover{
+	cursor: pointer;
+}
+
+#apUXWebsMaxLabel {
+	margin-left: 20px;
+}
+
+#apUXWebsMinLabel {	
+}
+
+#toBeCentered{
+	width: 100%;
+}

@@ -1,0 +1,94 @@
+resname	en	it
+hello	hello	ciao
+chooseLangTitle	Welcome to our online lab!	Benvenuti nel nostro laboratorio on-line!
+chooseLangBody	Click here to choose English	Clicca qui per scegliere italiano
+chooseTheLang	Choose a language	Scegli una lingua
+welcomeTitle	Welcome to our online lab!	Benvenuti nel nostro laboratorio on-line!
+welcomeTitle2	You now can check your view of and preferences for Visual Complexity in Web Design	È ora possibile controllare la tua visuale e le preferenze per complessità visiva nel Web Design
+welcomeBody	The check will consist of 4 steps:	La verifica consiste in 4 fasi:
+wStep1	Answering demographics questionnaire	Rispondi al questionario demografico
+wStep2	Doing a few training trails, for procedure familiarization	Fai alcune prove per familiarizzare con la procedura
+wStep3	Doing the real evaluation	Fai una valutazione effettiva
+wDataNote	The data you give us may later be used for research purposes, after it is aggregated. We do not track the personal details that would let anyone identify you, only anonymized demographics information and design preferences.	I dati forniti potranno successivamente essere utilizzati per scopi di ricerca dopo esser stati raccolti. Non teniamo traccia dei dati personali che permettano la vostra identificazione, teniamo traccia solo di informazioni demografiche anonime e delle preferenze di design.
+wStep4	Looking at your preferences as understood by the machine	Osserva le tue preferenze così come sono elaborate dalla macchina
+dataUseAgree	I understand the conditions of the study and agree to participate in it.	Comprendo le condizioni dello studio e sono d'accordo a parteciparvi.
+proceed	Proceed	Procedi
+demTitle	Demographics questionnaire	Questionario demografico
+qVision	My color vision ability	La mia abilità nel riconoscere i colori
+qVisionOpt1	Normal color vision	Normale percezione dei colori 
+qVisionOpt2	Color blind	Daltonismo
+qGender	My gender	Il mio genere
+qGenderOpt1	Female	Femmina
+qGenderOpt2	Male	Maschio
+qGenderOpt3	Other or refuse to tell	Altro o mi rifiuto di rispondere
+qAge	My age	La mia età
+qAgeOpt1	less 8 years old	meno di 8 anni
+qAgeOpt2	from 8 to 12 years old 	da 8 a 12 anni
+qAgeOpt3	form 13 to 18 years old	da 13 a 18 anni
+qAgeOpt4	from 18 to 25 years old	da 18 a 25 anni
+qAgeOpt5	from 25 to 40 years old	da 25 a 40 anni
+qAgeOpt6	over 40 years old	più di 40 anni
+qGroup	I am a	Io sono un(a)
+qGroupOpt1	School pupil	Studente
+qGroupOpt2	Parent	Genitore
+qGroupOpt3	Teacher	Insegnante
+qGroupOpt4	Researcher	Ricercatore
+qGroupOpt5	Other	Altro
+qDyslexic	I have been diagnosed with dyslexia	Mi è stato diagnosticato con dislessia
+qDyslexicYes	Yes	Si
+qDyslexicNo	No	No
+saving	Saving	Salvataggio
+resubmit	An error occured ({textStatus}). Try re-submitting the data. If the error persists, please kindly contact the site administrator	Si è verificato un errore ({textStatus}). Provare a inserire nuovamente i dati. Se l'errore persiste, si prega gentilmente di contattare l'amministratore del sito.
+simpleLabel	Simple	Semplice
+complexLabel	Complex	Complesso
+rateThePage	Rate the webpage	Vota la pagina web
+testQuestion	How simple/complex was the page?	Quanto era semplice/complessa la pagina?
+instrTitle	Instructions	Istruzioni
+instrBody	We will now sample your preferences of visual complexity in web page design. This will include many sampling trials, each of which consists of the following steps	Ora campioneremo le tue preferenze rispetto alla complessità visiva nel design delle pagine web. Questa fase includerà molte prove di campionamento, ognuna delle quali sarà costituita dai seguenti passaggi.
+instr1	A red cross will appear on the screen for a second. Please look at the middle of it.	Una croce rossa apparirà sullo schermo per un secondo. Si è pregati di guardare la croce al centro dello schermo.
+instr2	A web page will briefly appear on the screen. Feel relaxed, don't try to study the page too meticulously.	Una pagina web apparirà brevemente sullo schermo. Rilassati, non cercare di studiare la pagina troppo meticolosamente.
+instr3	You set a rating to the webpage using either a mouse or key buttons from 1 to 9. Don't spend too much time thinking, rate instinctively.	È possibile valutare la pagina web utilizzando un mouse o il tasto chiave da 1 a 9. Non perdere troppo tempo a pensare, valuta istintivamente.
+instrBody2	To get familiar with the procedure, you now will go through several mock trials, and only then will you go on to the real trials.	Per acquisire familiarità con la procedura farai diverse prove e solo dopo passerai alla sperimentazione vera e propria.
+preTrainTitle	Training	Preparazione
+preTrainBody	To get familiar with the procedure. These results won't be recorded.	Per acquisire familiarità con la procedura. Questi risultati non non verranno registrati.
+preEvalTitle	Real evaluation	Valutazione effettiva
+preEvalBody	Training is over. The results will be recorded now. 	La fase di pratica è finita. Da adesso i risultati verranno registrati.
+resultTitle	Enough working, let's see the results!	Ottimo lavoro!  Vediamo i risultati.
+resultBody	You rated the visual complexity of web pages and that's how your ratings compare against others:	Hai valutato la complessità visiva delle pagine web ed è così che le tue valutazioni risultano rispetto agli altri:
+gender	other people of the same gender	altre persone dello stesso sesso
+ageGroup	other people of the same age group	altre persone della stessa fascia di età
+socialGroup	other people of the same social group	le altre persone dello stesso gruppo sociale
+allOtherHumans	all other humans	tutti gli altri esseri umani
+machine	the machine	la macchina
+resCorr	Your view of webpage complexity resembles {percent}% the view of others ({group})	La tua visione della complessità delle pagine web assomiglia il {percent}% della vision degli altri ({group})
+resMeanMachine	overall, your scores were {hiLow} than machine's scores {percent}% of the time.	Nel complesso i punteggi sono stati {hiLow} rispetto ai punteggi della macchina in {percent}% di tempo.
+resMeanHumans	overall, your scores were {hiLow} than the scores of {percent} percent of {group}.	Nel complesso i punteggi sono stati {hiLow} rispetto ai punteggi del {percent} per cento dei/delle {group}.
+resHigher	 higher (more pessimistic)	più alto (più pessimisti)
+resLower	 lower (less pessimistic)	inferiore (meno pessimistiche)
+resTitleFav	Our algorithms believe that you'd favore these webpages	I nostri elaboratori credono che preferiresti questi siti
+resMost	the most	più
+resLeast	the least	meno
+giveEmail	To email yourself these results, type your email address in the textbox below.	Per inviarti questi risultati via posta elettronica digita il tuo indirizzo e-mail nel seguente box.
+completeTitle	Finished	Finito
+completeBody	The only thing left is leaving us your feedback about the system, if you wish. How fun or dull was the system? How would you improve it? What do you think about the existing webpage designs?	Puoi lasciare un tuo commento sul sistema  se lo desideri. Quanto o quanto poco divertente era il sistema? Come si può migliorare? Cosa ne pensi del design delle pagine web esistenti?
+saved	Saved. Thanks for the feedback.	Sessione salvata. Grazie per I tuoi commenti.
+_404	The page you're looking for doesn't exist.	La pagina che stai cercando non esiste.
+_500	A major error happened on the server. Please try to reload the page. If this doesn't work, please kindly contact the server administrator.	Un errore si è verificato sul server. Prova a ricaricare la pagina. Se questo non funziona  si è pregati gentilmente di contattare l'amministratore del server.
+webpage	Webpage	Pagina web
+confirmReady	I confirm, I'm ready	Confermo,  sono pronto.
+notEnoughData	We don't have enough data from others to compare against. Please come back later to see these results.	Non abbiamo dati sufficienti da parte degli altri partecipanti per fare un confronto. Si prega di tornare più tardi per vedere i risultati.
+resNegCorr	Your view of webpage complexity contradicts {percent}% the view of others ({group})	La tua visione della complessità della pagina web contraddice al {percent}% la vista degli altri ({group})
+however	However	Tuttavia
+also	Also	Inoltre
+feedbackPlaceholder	Type your feedback here... 	Inserisci il tuo feedback qui ...
+emailedOk	The results are emailed.	I risultati saranno inviati via email.
+yourResultH2	The results of exploration of your view and preferences of Visual Complexity in Webpage Design.	I risultati dell'esplorazione della tua visione e delle tue preferenze di Complessità Visiva nel design delle pagine web.
+yourResultH1	From the University of Trento researchers	Dai ricercatori dell'Università di Trento
+yourResultBody1	You can always access your results (compared against a larger pool of other people as the study goes on) at:	Potrai sempre accedere ai risultati (e confrontarli con un numero più ampio di altre persone man mano che lo studio prosegue) a:
+yourResultBody2	You can also find out more about us at:	Inoltre qui è possibile avere più informazioni su di noi:
+yourResultBody3	You can also email your questions and suggestions about this or other bits of our research at:	È inoltre possibile inviare domande e suggerimenti su questo o altri pezzi della nostra ricerca:
+emailSubject	Your preferences for visual complexity in webpage design.	Le tue preferenze rispetto alla complessità visiva nel design di pagine web.
+incorrectEmail	The email address is not correct. Please revise it or leave the text field blank.	L'indirizzo email non è corretto. Si prega di rivedere o lasciare vuoto il campo di testo.
+thanksForFeedback	Thank you for the feedback. We value your opinion and will try to learn from it.	Grazie per il feedback. Apprezziamo la vostra opinione e cercheremo di imparare da esso.
+closeConfirm	If you leave the page now, all results will be lost. Please confirm you want to leave.	Attenzione! Se si esce dalla pagina tutti i risultati andranno persi. Conferma che si vuole lasciare la pagina.
+interaction	The interAction research group, University of Trento.	Il gruppo di ricerca 'interAction' del Dipartimento di Ingegneria e Scienza dell'Informazione dell'Università di Trento.

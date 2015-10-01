@@ -1,0 +1,52 @@
+<% var s = window.App.S; %>
+<div id="confirmReadyWrapper" class="globalOverlay">
+	<div align="center" class="tablecell">
+		<input type="button" class="btn btn-lg btn-primary" value="<%= s['confirmReady'] %>" id="confirmReadyButton" />
+	</div>
+</div>
+<div class="row full-height">
+	<div class="col-md-12" id="testWrapper" align="center">
+		<div id="redCrossWrapper">
+			<img id="fixationCrossImg" src="/public/img/red.cross.2.png" height="768px" width="1024px" />
+		</div>
+		<div id="theImageWrapper">
+			<img id="aStimulus" height="768px" width="1024px" />
+		</div>
+		<div id="noiseMaskWrapper">
+			<img id="blackWhiteNoise" src="/public/img/noise.small.png" height="768px" width="1024px"/>
+		</div>
+		<div id="setRatingWrapper">
+			<div class="row" id="toBeCentered">
+				<div class="col-md-2"></div>
+				<div class="col-md-8 col-md-offset-2">
+					<hr />
+					<p class="form-group">
+						<b><%= s['webpage']%> #<span id="trialNumber"></span></b><span> out of <b><%= numOfTrials %></b>.</span>
+						<span><%= s["testQuestion"] %></span>
+					</p>
+					<br/>
+					<form class="form-horizontal form-inline" action="#" role="form" name="testTrialForm">
+						<div class="controls-row">
+							<input id="stimulusId" type="hidden" name="stimulusId" value="_default"/>
+							<input id="codeName" type="hidden" name="codeName" value="_defaultCName"/>
+							<input id="exposureTime" type="hidden" name="exposureTime" value="_defaultExpTime"/>
+							<span id="apUXWebsMinLabel"><%= s["simpleLabel"] %></span>
+							<% for(var i = 1; i <= 9; i++) {%>
+							<label class="radio-inline control-label apUXRadio">
+								<p>
+									<b><%= i %></b>
+								</p>
+								<input type="radio" id="r<%= i %>" name="rating" value="<%= i %>" required/>
+							</label>
+							<% } %>
+							<span id="apUXWebsMaxLabel"><%= s["complexLabel"] %></span>
+						</div>
+						<br />
+						<input type="submit" id="submitButton" value="<%= s['rateThePage']%>" class="btn btn-primary btn-primary btn-lg"/>
+					</form>
+					<hr />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
